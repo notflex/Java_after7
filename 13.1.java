@@ -5,3 +5,17 @@ public class main {
             }
         }
     }
+
+#отдельный файл
+public class SampleClass implements AutoCloseable {
+    public void do_smth() {
+        System.out.println("Вызван метод класса");
+    }
+
+    @Override
+    public void close() throws Exception {
+        System.out.println("Объект отработал, высвобождаем ресурсы.");
+    }
+
+
+}
