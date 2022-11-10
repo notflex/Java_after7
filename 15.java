@@ -19,6 +19,19 @@ class Student{
         else{
             return 1;
         }
+    }
+    public void printStudents(List<Student> students, int course){
+        ArrayList < String > studentlist = new ArrayList < String > ();
+
+
+        for(Student person:students){
+            if(person.course == course){
+                studentlist.add(person.name);
+            }
+        }
+        for(int i =0; i < studentlist.size(); i++){
+            System.out.println("Имя студента: " + studentlist.get(i) + " Курс: " + course);
+        }
 
     }
 }
