@@ -4,20 +4,12 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StreamTasks {
+public class myclass {
     public static void main(String[] args) {
         first();
 //        second();
     }
-
-    // Создать список из некоторого количества пользователей.
-    //1)      Вывести всех пользователей, отсортированных по lastName
-    //2)      Вывести всех пользователей, отсортированных по age
-    //3)      Проверить, что для всех пользователей age > 7
-    //4)      Вычислить средний возраст всех пользователей
-    //5)  Вывести количество разных стран проживания (country) среди заданных пользователей
-    //(Требование: реализовать все пункты с использованием Stream API
-
+   
     public static void first() {
         ArrayList<User> users = new ArrayList<>(Arrays.asList(
                 new User(1, "firstName1", "lastName1", 7, "USA"),
@@ -51,6 +43,6 @@ public class StreamTasks {
         String[] strings = scan.nextLine().toLowerCase().split("[^0-9a-zа-я]");
         Stream<String> stream = Arrays.stream(strings).filter((str) -> str.length() > 0);
         System.out.println(Arrays.toString(stream.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream().
-                sorted(StreamTasks::forSort).map(Map.Entry::getKey).limit(10).toArray()));
+                sorted(myclass::forSort).map(Map.Entry::getKey).limit(10).toArray()));
     }
 }
